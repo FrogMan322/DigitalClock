@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css-reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Digital Clock</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="clock__container" id="clock__container"></div>
+      <form action="" class="setClockTimer">
+        <div class="form__container">
+          <label for="hours">Hours: </label>
+          <input
+            type="number"
+            name="hours"
+            id="hours"
+            value="1"
+            min="0"
+            max="23"
+          />
+          <label for="minutes">Minutes: </label>
+          <input
+            type="number"
+            name="minutes"
+            id="minutes"
+            value="1"
+            min="0"
+            max="59"
+          />
+          <label for="seconds">Seconds: </label>
+          <input
+            type="number"
+            name="seconds"
+            id="seconds"
+            value="1"
+            min="0"
+            max="59"
+          />
+          <audio src="sound/alarm-clock-short-6402.mp3" id="alarm"></audio>
+        </div>
+
+        <div class="clock__btn_container">
+          <button type="submit" class="clockBtn">Set Alarm</button>
+          <button id="stopAlaram" class="clockBtn" type="button">
+            Alarm Off
+          </button>
+        </div>
+      </form>
+      <div class="timerNotification">--Alarm is Set--</div>
+    </div>
+  </body>
+</html>

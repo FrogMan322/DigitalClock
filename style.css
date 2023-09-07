@@ -1,0 +1,145 @@
+@font-face {
+  font-family: "Digit";
+  src: url("fonts/DS-DIGIT.TTF") format("woff2"),
+    url("fonts/DS-DIGIT.TTF") format("woff");
+}
+body {
+  box-sizing: border-box;
+  background-image: url("https://images.unsplash.com/photo-1590418606746-018840f9cd0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fE5JR0hUfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.container {
+  position: relative;
+  border-radius: 2rem;
+  justify-content: center;
+  border: 7px solid black;
+  width: 650px;
+  height: 400px;
+  grid-column: 2/3;
+  grid-row: 2/3;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.clock__container {
+  height: 100px;
+  font-size: 10rem;
+}
+.clockTime {
+  min-width: 10rem;
+  padding: 0 30px;
+  border-radius: 2rem;
+  position: relative;
+  margin-top: 3.5rem;
+  font-family: Digit;
+  color: #8b0000;
+  background-color: black;
+}
+
+.form__container {
+  border-radius: 5rem;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  gap: 20px;
+}
+.setClockTimer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100px;
+  gap: 4px;
+  display: flex;
+}
+
+[name="hours"],
+[name="minutes"],
+[name="seconds"] {
+  color: #8b0000;
+  font-size: 2.5rem;
+  font-family: Digit;
+  text-align: center;
+  background-color: transparent;
+  width: 70px;
+}
+[for="hours"],
+[for="minutes"],
+[for="seconds"] {
+  font-size: 10rem;
+}
+.clockBtn {
+  height: 40px;
+  font-family: Digit;
+  border: none;
+  background-color: black;
+  color: white;
+  margin: 15px;
+  font-size: 1rem;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  border-radius: 2rem;
+  cursor: pointer;
+  text-align: center;
+}
+.setClockTimer input {
+  border: none;
+  border-radius: 2rem;
+}
+.setClockTimer label {
+  font-family: Digit;
+  font-size: 1rem;
+}
+.clockBtn:hover {
+  background-color: red;
+}
+.clock__btn_container {
+  display: flex;
+}
+.shake {
+  animation: 0.3s infinite alternate shake;
+}
+.timerNotification {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.7rem;
+  font-family: Digit;
+  position: absolute;
+  color: #8b0000;
+  background-color: black;
+  border-radius: 0 0 15px 15px;
+  display: none;
+}
+.timerNotification.hidden {
+  display: block;
+}
+@keyframes shake {
+  0% {
+    transform: translateX(-5%);
+    background-color: red;
+  }
+  30% {
+    transform: translateX(5%);
+    background-color: transparent;
+  }
+  68%,
+  72% {
+    transform: translateX(-5%);
+    background-color: red;
+  }
+  100% {
+    transform: translateX(5%);
+    background-color: transparent;
+  }
+}
