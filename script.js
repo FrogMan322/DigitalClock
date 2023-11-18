@@ -71,19 +71,9 @@ stopAlarm.addEventListener("click", () => {
   container.classList.remove("shake");
   alarm.pause();
   alarm.currentTime = 0;
-  alarm.savedTime.booleon = false;
   savedTime.hours = "";
   savedTime.minutes = "";
   savedTime.seconds = "";
+  savedTime.booleon = false;
   localStorage.setItem("timer", JSON.stringify(savedTime));
 });
-
-// function renderNotification() {
-//   if (savedTime["hours"]) {
-//     timerNotification.textContent = "--Alarm is ON--";
-//   } else {
-//     timerNotification.textContent = "";
-//   }
-// }
-
-// setInterval(renderNotification, 1000);
